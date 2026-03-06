@@ -3,7 +3,7 @@ import sys
 def main():
   words = sys.argv[1:]
   if not words:
-    print("Использование: python task05.py <слово1> <слово2> <слово3> ...")
+    print("Usage: python task05.py <word1> <word2> <word3> ...")
     sys.exit(1)
   longest_word = max(words, key=len)
   print(longest_word)

@@ -3,12 +3,12 @@ import sys
 
 def main():
   if len(sys.argv) < 2:
-    print("Использование: python task04.py <число>")
+    print("Usage: python task04.py <number>")
     sys.exit(1)
 
   number_str = sys.argv[1].lstrip("-")
   if not number_str or not number_str.isdigit():
-    print("Ошибка: параметр должен быть целым числом (например, 123 или -456).")
+    print("Error: parameter must be an integer (e.g. 123 or -456).")
     sys.exit(1)
 
   digit_sum = 0

@@ -1,5 +1,5 @@
 """
-Запуск: python -m pytest tests/ -v   или  python tests/test_all.py
+Run: python -m pytest tests/ -v   or   python tests/test_all.py
 """
 
 import os
@@ -14,18 +14,18 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 class TestTask01(unittest.TestCase):
     def test_integer(self):
         import task01
-        self.assertEqual(task01.get_param_type("42"), "целое число")
-        self.assertEqual(task01.get_param_type("-10"), "целое число")
+        self.assertEqual(task01.get_param_type("42"), "integer")
+        self.assertEqual(task01.get_param_type("-10"), "integer")
 
     def test_float(self):
         import task01
-        self.assertEqual(task01.get_param_type("3.14"), "дробное число")
-        self.assertEqual(task01.get_param_type("0.5"), "дробное число")
+        self.assertEqual(task01.get_param_type("3.14"), "float")
+        self.assertEqual(task01.get_param_type("0.5"), "float")
 
     def test_string(self):
         import task01
-        self.assertEqual(task01.get_param_type("hello"), "строка")
-        self.assertEqual(task01.get_param_type(""), "строка")
+        self.assertEqual(task01.get_param_type("hello"), "string")
+        self.assertEqual(task01.get_param_type(""), "string")
 
 
 class TestTask02(unittest.TestCase):
@@ -129,8 +129,8 @@ class TestTaskAdditional02(unittest.TestCase):
             with open(out_path, encoding="utf-8") as f:
                 html = f.read()
             self.assertIn("<table", html)
-            self.assertIn("Строка 1", html)
-            self.assertIn("Строка 5", html)
+            self.assertIn("Row 1", html)
+            self.assertIn("Row 5", html)
             self.assertEqual(html.count("<tr "), 5)
         finally:
             if os.path.exists(out_path):

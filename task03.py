@@ -10,11 +10,7 @@ structure = {
                 }
             }
         }
-    },
-    "level1_b": [
-        "leaf1",
-        ["nested_list_level2", ["nested_list_level3", ["nested_list_level4", ["nested_list_level5"]]]],
-    ],
+    }
 }
 
 def color_for_level(level: int) -> str:

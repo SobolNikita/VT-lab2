@@ -3,22 +3,22 @@ import sys
 
 def main():
   if len(sys.argv) < 2:
-    print("Использование: python task02.py <количество_строк>")
+    print("Usage: python task02.py <number_of_rows>")
     sys.exit(1)
 
   try:
     rows = int(sys.argv[1])
   except ValueError:
-    print("Ошибка: количество строк должно быть целым числом.")
+    print("Error: number of rows must be an integer.")
     sys.exit(1)
 
   if rows < 1:
-    print("Ошибка: количество строк должно быть не меньше 1.")
+    print("Error: number of rows must be at least 1.")
     sys.exit(1)
 
   print("<table border=\"1\">")
   print("  <thead>")
-  print("    <tr><th>№ строки</th></tr>")
+  print("    <tr><th>Row #</th></tr>")
   print("  </thead>")
   print("  <tbody>")
   for i in range(1, rows + 1):
