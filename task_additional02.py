@@ -34,8 +34,8 @@ def main():
     parts.append(f"    <td>Строка {i + 1}</td>")
     parts.append("  </tr>")
 
-    parts.append("</table>")
-    parts.append("</body></html>")
+  parts.append("</table>")
+  parts.append("</body></html>")
 
   html = "\n".join(parts)
   with open(out_path, "w", encoding="utf-8") as f:

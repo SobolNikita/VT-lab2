@@ -32,15 +32,15 @@ def render(obj, level=1):
       html.append(render(value, level + 1))
       html.append("</li>")
     html.append("</ul>")
-    elif isinstance(obj, (list, tuple)):
-      html.append("<ul>")
-      for item in obj:
-        html.append("<li>")
-        html.append(render(item, level + 1))
-        html.append("</li>")
-      html.append("</ul>")
-    else:
-      html.append(f"<span style='color:{color}'>{escape(str(obj))}</span>")
+  elif isinstance(obj, (list, tuple)):
+    html.append("<ul>")
+    for item in obj:
+      html.append("<li>")
+      html.append(render(item, level + 1))
+      html.append("</li>")
+    html.append("</ul>")
+  else:
+    html.append(f"<span style='color:{color}'>{escape(str(obj))}</span>")
 
   return "\n".join(html)
 

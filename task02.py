@@ -16,15 +16,15 @@ def main():
     print("Ошибка: количество строк должно быть не меньше 1.")
     sys.exit(1)
 
-    print("<table border=\"1\">")
-    print("  <thead>")
-    print("    <tr><th>№ строки</th></tr>")
-    print("  </thead>")
-    print("  <tbody>")
-    for i in range(1, rows + 1):
-      print(f"    <tr><td>{i}</td></tr>")
-    print("  </tbody>")
-    print("</table>")
+  print("<table border=\"1\">")
+  print("  <thead>")
+  print("    <tr><th>№ строки</th></tr>")
+  print("  </thead>")
+  print("  <tbody>")
+  for i in range(1, rows + 1):
+    print(f"    <tr><td>{i}</td></tr>")
+  print("  </tbody>")
+  print("</table>")
 
 
 if __name__ == "__main__":
